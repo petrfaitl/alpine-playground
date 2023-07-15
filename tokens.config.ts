@@ -12,7 +12,31 @@ export default defineTheme({
     indigo: {},
     indigob: {},
     indigobl: {},
-    indigoblu: {}
+    indigoblu: {},
+    royalblu: {},
+    royalbl: {},
+    royalb: {},
+    royal: {},
+    roya: {},
+    roy: {},
+    ro: {},
+    r: {},
+    '': {},
+    i: {},
+    in: {},
+    ind: {},
+    indi: {},
+    l: {},
+    li: {},
+    lig: {},
+    ligh: {},
+    lightb: {},
+    p: {},
+    pr: {},
+    pri: {},
+    prim: {},
+    prima: {},
+    primar: {}
   },
 
   alpine: {
@@ -35,5 +59,25 @@ export default defineTheme({
   cogray: {},
   colgray: {},
   cologray: {},
-  colorgray: {}
+  colorgray: {},
+
+  elements: {
+    backdrop: {
+      background: {
+        dark: '#060318'
+      }
+    },
+
+    border: {
+      primary: {
+        static: {
+          dark: 'var(--color-primary-900)'
+        },
+
+        hover: {
+          dark: 'var(--color-primary-800)'
+        }
+      }
+    }
+  }
 })
