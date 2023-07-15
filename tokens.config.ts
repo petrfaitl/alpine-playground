@@ -15,8 +15,8 @@ export default defineTheme({
 
     backdrop: {
       backgroundColor: {
-        initial: '#f4f4f5b3',
-        dark: '#18181bb3'
+        initial: '#f4f4f5',
+        dark: '#18181b'
       }
     }
   },
