@@ -2,7 +2,34 @@ import { defineTheme } from 'pinceau'
 
 export default defineTheme({
   color: {
+    royalblue: {
+      900: '#060318'
+    },
 
+    r: {},
+    ro: {},
+    roy: {},
+    roya: {},
+    royal: {},
+    royalb: {},
+    royalbl: {},
+    royablue: {},
+    royblue: {},
+    roblue: {},
+    rblue: {},
+    lblue: {},
+    liblue: {},
+    ligblue: {},
+    lighblue: {},
+    g: {},
+    l: {},
+    li: {},
+    lih: {},
+    lig: {},
+    ligh: {},
+    light: {},
+    lightbl: {},
+    lightblu: {}
   },
 
   alpine: {
@@ -23,7 +50,7 @@ export default defineTheme({
   elements: {
     backdrop: {
       background: {
-        dark: '#060318'
+        dark: 'var(--color-royalblue-900)'
       }
     },
 
@@ -34,7 +61,7 @@ export default defineTheme({
         },
 
         hover: {
-          dark: 'var(--color-primary-800)'
+          dark: 'var(--color-lightblue-900)'
         }
       }
     }
