@@ -2,41 +2,7 @@ import { defineTheme } from 'pinceau'
 
 export default defineTheme({
   color: {
-    b: {},
-    bl: {},
-    blu: {},
-    ri: {},
-    rin: {},
-    rindi: {},
-    rindigo: {},
-    indigo: {},
-    indigob: {},
-    indigobl: {},
-    indigoblu: {},
-    royalblu: {},
-    royalbl: {},
-    royalb: {},
-    royal: {},
-    roya: {},
-    roy: {},
-    ro: {},
-    r: {},
-    '': {},
-    i: {},
-    in: {},
-    ind: {},
-    indi: {},
-    l: {},
-    li: {},
-    lig: {},
-    ligh: {},
-    lightb: {},
-    p: {},
-    pr: {},
-    pri: {},
-    prim: {},
-    prima: {},
-    primar: {}
+
   },
 
   alpine: {
@@ -49,18 +15,11 @@ export default defineTheme({
 
     backdrop: {
       backgroundColor: {
-        dark: '#18181b'
+        initial: '#f4f4f5b3',
+        dark: '#18181bb3'
       }
     }
   },
-
-  gray: {},
-  cgray: {},
-  cogray: {},
-  colgray: {},
-  cologray: {},
-  colorgray: {},
-
   elements: {
     backdrop: {
       background: {
