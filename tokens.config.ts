@@ -39,7 +39,7 @@ export default defineTheme({
   elements: {
     backdrop: {
       background: {
-        dark: '#0f172a33'
+        dark: '#0f172a'
       },
       filter: 'blur(20px)'
     },
@@ -59,6 +59,13 @@ export default defineTheme({
     surface: {
       background: {
         base: {
+          dark: 'var(--color-slate-900)'
+        }
+      },
+
+      secondary: {
+        backgroundColor: {
+          initial: 'var(--color-slate-100)',
           dark: 'var(--color-slate-900)'
         }
       }
