@@ -16,11 +16,37 @@ export default defineTheme({
       950: '#020617',
     }
   },
-  alpine:{
-    elements: {
-      backdrop:{
-        filter:{
-          'blur(20px)',
+  alpine: {
+    body: {
+      backgroundColor: {
+        initial: '#ffffff',
+        dark: '#060318'
+      }
+    },
+
+    backdrop: {
+      backgroundColor: {
+        initial: '#f4f4f5',
+        dark: '#18181b'
+      }
+    }
+  },
+  elements: {
+    backdrop: {
+      background: {
+        dark: 'var(--color-royalblue-900)'
+      },
+      filter: 'blur(20px)'
+    },
+
+    border: {
+      primary: {
+        static: {
+          dark: 'var(--color-primary-900)'
+        },
+
+        hover: {
+          dark: 'var(--color-lightblue-900)'
         }
       }
     }
