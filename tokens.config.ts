@@ -2,66 +2,25 @@ import { defineTheme } from 'pinceau'
 
 export default defineTheme({
   color: {
-    royalblue: {
-      900: '#060318'
-    },
-
-    r: {},
-    ro: {},
-    roy: {},
-    roya: {},
-    royal: {},
-    royalb: {},
-    royalbl: {},
-    royablue: {},
-    royblue: {},
-    roblue: {},
-    rblue: {},
-    lblue: {},
-    liblue: {},
-    ligblue: {},
-    lighblue: {},
-    g: {},
-    l: {},
-    li: {},
-    lih: {},
-    lig: {},
-    ligh: {},
-    light: {},
-    lightbl: {},
-    lightblu: {}
-  },
-
-  alpine: {
-    body: {
-      backgroundColor: {
-        initial: '#ffffff',
-        dark: '#060318'
-      }
-    },
-
-    backdrop: {
-      backgroundColor: {
-        initial: '#f4f4f5',
-        dark: '#18181b'
-      }
+    slate: {
+      50: '#f8fafc',
+      100: '#f1f5f9',
+      200: '#e2e8f0',
+      300: '#cbd5e1',
+      400: '#94a3b8',
+      500: '#64748b',
+      600: '#475569',
+      700: '#334155',
+      800: '#1e293b',
+      900: '#0f172a',
+      950: '#020617',
     }
   },
-  elements: {
-    backdrop: {
-      background: {
-        dark: 'var(--color-royalblue-900)'
-      }
-    },
-
-    border: {
-      primary: {
-        static: {
-          dark: 'var(--color-primary-900)'
-        },
-
-        hover: {
-          dark: 'var(--color-lightblue-900)'
+  alpine:{
+    elements: {
+      backdrop:{
+        filter:{
+          'blur(20px)',
         }
       }
     }
