@@ -14,27 +14,32 @@ export default defineTheme({
       800: '#1e293b',
       900: '#0f172a',
       950: '#020617',
-    }
+    },
+
+    s: {},
+    sla: {},
+    slat: {},
+    sl: {}
   },
   alpine: {
     body: {
       backgroundColor: {
         initial: '#ffffff',
-        dark: '#060318'
+        dark: 'var(--color-slate-950)'
       }
     },
 
     backdrop: {
       backgroundColor: {
-        initial: '#f4f4f5',
-        dark: '#18181b'
+        initial: '',
+        dark: ''
       }
     }
   },
   elements: {
     backdrop: {
       background: {
-        dark: 'var(--color-royalblue-900)'
+        dark: '#0f172a33'
       },
       filter: 'blur(20px)'
     },
@@ -47,6 +52,14 @@ export default defineTheme({
 
         hover: {
           dark: 'var(--color-lightblue-900)'
+        }
+      }
+    },
+
+    surface: {
+      background: {
+        base: {
+          dark: 'var(--color-slate-900)'
         }
       }
     }
