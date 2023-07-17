@@ -65,6 +65,10 @@ css
   padding: '{space.8}',
   borderRadius: '{radii.xl}',
   border: '1px solid {elements.border.primary.static}',
+'&:hover':{
+    border: '1px solid {elements.border.primary.hover}',
+    transition: 'all 0.5s ease-out'
+},
   background: '{elements.backdrop.background}',
   backdropFilter: '{elements.backdrop.filter}',
 '.photo img': {

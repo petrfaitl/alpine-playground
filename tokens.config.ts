@@ -28,18 +28,12 @@ export default defineTheme({
         dark: 'var(--color-slate-950)'
       }
     },
-
-    backdrop: {
-      backgroundColor: {
-        initial: '',
-        dark: ''
-      }
-    }
   },
   elements: {
     backdrop: {
       background: {
-        dark: '#0f172a'
+        initial:'#ffffff',
+        dark: 'var(--color-slate-900)'
       },
       filter: 'blur(20px)'
     },
@@ -49,10 +43,18 @@ export default defineTheme({
         static: {
           dark: 'var(--color-primary-900)'
         },
-
         hover: {
-          dark: 'var(--color-lightblue-900)'
-        }
+          initial: 'var(--color-lightblue-200)',
+          dark: 'var(--color-lightblue-800)'
+        },
+      },
+      secondary: {
+        static: {
+          dark: 'var(--color-primary-900)'
+        },
+        hover: {
+          dark: 'var(--color-lightblue-500)'
+        },
       }
     },
 
