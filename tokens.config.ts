@@ -16,10 +16,6 @@ export default defineTheme({
       950: '#020617',
     },
 
-    s: {},
-    sla: {},
-    slat: {},
-    sl: {}
   },
   alpine: {
     body: {
