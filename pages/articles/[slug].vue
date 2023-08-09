@@ -3,5 +3,8 @@
 </template>
 
 <script setup>
+  definePageMeta({
+    documentDriven: false
+  })
 
 </script>

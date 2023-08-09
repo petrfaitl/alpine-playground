@@ -1,24 +1,36 @@
 <template>
-  <ContentNavigation>
-    <ul>
-    <NuxtLink
-      v-for="link of navigation[1].children"
-      :key="link._path"
-      :to="link._path"
-    >
-      <li>
-      {{ link.title }}
-      </li>
-    </NuxtLink>
-    </ul>
-  </ContentNavigation>
-  <ContentDoc />
+  <Container>
+    <NuxtLayout :name="props.layout">
+      <ContentNavigation v-if="locNavigation">
+        <ul>
+          <NuxtLink
+            v-for="link of locNavigation"
+            :key="link._path"
+            :to="link._path"
+          >
+            <li>
+              {{ link.title }}
+            </li>
+          </NuxtLink>
+        </ul>
+      </ContentNavigation>
+      <ContentDoc />
+    </NuxtLayout>
+  </Container>
 </template>
 
 <script setup>
-  const { locale } = useI18n();
-  const { navigation, page, surround, globals } = useContent();
+  const props = defineProps({layout: {type: String, default: 'localised'},});
+  console.log(props.layout);
 
-  const locNavigation = await queryContent().locale(locale.value).find();
-  console.log(navigation);
+  definePageMeta({
+    documentDriven: false,
+  })
+  const {locale} = useI18n();
+  // const { navigation, page, surround, globals } = useContent();
+
+  const locNavigation = await queryContent()
+      .where({locale: {$eq: locale.value}})
+      .find();
+  // console.log(page.value);
 </script>
