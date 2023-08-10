@@ -14,23 +14,29 @@
           </NuxtLink>
         </ul>
       </ContentNavigation>
-      <ContentDoc />
+      <ContentDoc>
+
+        <template #not-found>
+          <ContentDoc :path="localePath()" />
+        </template>
+      </ContentDoc>
     </NuxtLayout>
   </Container>
 </template>
 
 <script setup>
   const props = defineProps({layout: {type: String, default: 'localised'},});
-  console.log(props.layout);
 
   definePageMeta({
     documentDriven: false,
   })
   const {locale} = useI18n();
-  // const { navigation, page, surround, globals } = useContent();
 
+  // Obtains locale, when none specified in path then fallback locale
+  const localePath = useLocalePath();
+
+  // Queries all pages in given locale for nav bar
   const locNavigation = await queryContent()
       .where({locale: {$eq: locale.value}})
       .find();
-  // console.log(page.value);
 </script>

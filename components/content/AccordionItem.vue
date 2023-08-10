@@ -6,19 +6,15 @@
       default: false,
     },
   })
-  const emit = defineEmits(['update:toggleOpen']);
 
-  const slots = useSlots();
+const isOpen = ref(props.open);
 
-
-
-  const isOpen = ref(props.open);
 
 
 </script>
 
 <template>
-  <div :class="{active: isOpen}" :expanded="{isOpen}" :aria-data-open="isOpen" class="accordion-item" @click="isOpen= !isOpen">
+  <div :class="{active: isOpen}" :expanded="{isOpen}" :aria-data-open="isOpen" class="accordion-item" @click="isOpen = !isOpen">
     <div class="topic" >
       <div class="icon">
         <Icon name="ion:plus" />
@@ -31,14 +27,14 @@
     </div>
 
     <div class="content" :class="{collapsed: !isOpen}">
-      <ContentSlot :use="$slots.content" unwrap="p" :open="isOpen">
+      <ContentSlot :use="$slots.content" unwrap="p">
         Text of Accordion
       </ContentSlot>
     </div>
   </div>
 </template>
 
-<style scoped lang="ts">
+<style  lang="ts">
 
 css
 (
@@ -51,9 +47,13 @@ css
             position: 'relative',
             padding: '{space.4}',
             paddingLeft: '{space.16}',
-            '&:hover, &.active': {
-                backgroundColor: '{elements.surface.secondary.backgroundColor}',
-                transition: 'all 0.5s ease-out',
+            '&:hover, &.active':
+            {
+              backgroundColor: '{elements.surface.secondary.backgroundColor}',
+              transition: 'all 0.5s ease-out',
+            },
+            'ol, ol li': {
+              margin: '0',
             },
             '.icon': {
                 position: 'absolute',
@@ -70,7 +70,8 @@ css
         '.content': {
             color: '{elements.text.secondary.color.static}',
             backgroundColor: '{elements.surface.secondary.backgroundColor}',
-            padding: '{space.4}',
+            padding: '{space.0}{space.4}',
+            overflowY: 'auto',
             paddingLeft: '{space.16}',
             transition: 'all 500ms ease-out',
             'maxHeight': '500px',
@@ -97,8 +98,6 @@ css
 }
 )
 
-
-
-
-
 </style>
+
+

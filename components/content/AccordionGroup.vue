@@ -7,32 +7,13 @@
   })
   const slots = useSlots();
 
-  const children = slots?.default?.();
-  // console.log(children);
-
-
-// const slotContent = slots?.default?.();
-//   console.log(slotContent);
-//
-//   const slotRef = ref();
-//   watch(slotRef,(newVal)=>{
-//     console.log('NewVal: ',newVal)
-//     console.log('SlotRef: ',slotRef);
-//
-//   });
-//
-//   const accordionState = slotContent.map((slot,idx)=>{
-//     return {'open': slot.props.open};
-//   })
-//
-//   console.log(accordionState);
 
 </script>
 
 <template>
   <div class="accordion-group">
     <h2 class="title">
-      <ContentSlot :use="$slots.title" unwrap="p" ref="slotRef">
+      <ContentSlot :use="$slots.title" unwrap="p">
         {{ title }}
       </ContentSlot>
     </h2>
