@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <ContentDoc />
+  <ContentDoc>
+    <template #not-found>
+      <DocumentDrivenNotFound />
+    </template>
+  </ContentDoc>
 </template>
 
 <style scoped lang="ts">

@@ -15,9 +15,8 @@
         </ul>
       </ContentNavigation>
       <ContentDoc>
-
         <template #not-found>
-          <ContentDoc :path="localePath()" />
+          <DocumentDrivenNotFound />
         </template>
       </ContentDoc>
     </NuxtLayout>

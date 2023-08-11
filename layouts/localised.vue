@@ -1,6 +1,7 @@
 <script setup lang="ts">
   const { locale, locales, fallbackLocale } = useI18n();
-  const localeSettings = useI18n();
+
+
   const switchLocalePath = useSwitchLocalePath();
 
   const availableLocales = computed(() => {

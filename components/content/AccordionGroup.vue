@@ -5,8 +5,15 @@
       default:'FAQs'
     }
   })
-  const slots = useSlots();
+  // const slots = useSlots();
 
+  const localePath = useLocalePath();
+
+  // Query partial content
+  //TODO
+   const { data } = queryContent(localePath('/_documents/')).where({ _partial: true}).find();
+
+  console.log(data);
 
 </script>
 
